@@ -1,0 +1,608 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Breakout</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>2m2oqhlgof90t</unique-id>
+    <saved-with-version>23900</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>480</width>
+        <height>854</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Orientations">Portrait</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="BG" sid="123773122434767">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="180580184533596" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tulio Pulgrossi\Desktop\BG.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="block" sid="595829950557143">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="150939744645121">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="587952946071836" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tulio Pulgrossi\Desktop\block4.png">
+                        <collision-poly>
+                            <point x="0.03125" y="0.03125" />
+                            <point x="0.5" y="0" />
+                            <point x="0.96875" y="0.03125" />
+                            <point x="1" y="0.5" />
+                            <point x="0.96875" y="0.96875" />
+                            <point x="0.5" y="1" />
+                            <point x="0.03125" y="0.96875" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tulio Pulgrossi\Desktop\block5.png">
+                        <collision-poly>
+                            <point x="0.03125" y="0.03125" />
+                            <point x="0.5" y="0" />
+                            <point x="0.96875" y="0.03125" />
+                            <point x="1" y="0.5" />
+                            <point x="0.96875" y="0.96875" />
+                            <point x="0.5" y="1" />
+                            <point x="0.03125" y="0.96875" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tulio Pulgrossi\Desktop\block6.png">
+                        <collision-poly>
+                            <point x="0.03125" y="0.03125" />
+                            <point x="0.5" y="0" />
+                            <point x="0.96875" y="0.03125" />
+                            <point x="1" y="0.5" />
+                            <point x="0.96875" y="0.96875" />
+                            <point x="0.5" y="1" />
+                            <point x="0.03125" y="0.96875" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="block2" sid="332194775456885">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="971195068674744">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="8Direction" sid="904873794666071">
+                    <behavior id="EightDir" />
+                </behavior-type>
+                <behavior-type name="BoundToLayout" sid="478769476859056">
+                    <behavior id="bound" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="133234308336701" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tulio Pulgrossi\Desktop\block2.png">
+                        <collision-poly>
+                            <point x="0.00862076" y="0" />
+                            <point x="0.577586" y="0" />
+                            <point x="0.991379" y="0" />
+                            <point x="0.995691" y="0.944444" />
+                            <point x="0.465517" y="0.944444" />
+                            <point x="0.00431034" y="0.944445" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ball" sid="378425692218477">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="574638224123649">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="985019481237933" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tulio Pulgrossi\Desktop\ball.png">
+                        <collision-poly>
+                            <point x="0.282051" y="0.205128" />
+                            <point x="0.487179" y="0.102564" />
+                            <point x="0.717949" y="0.179487" />
+                            <point x="0.820513" y="0.410256" />
+                            <point x="0.717949" y="0.641026" />
+                            <point x="0.487179" y="0.74359" />
+                            <point x="0.25641" y="0.641026" />
+                            <point x="0.179487" y="0.410256" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="border" sid="691862881753252">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="336157940514730">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="447531197265392" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Keyboard" sid="315341116544891">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="block3" sid="110410815763593">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="890408701537243" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tulio Pulgrossi\Desktop\block5.png">
+                        <collision-poly>
+                            <point x="0.03125" y="0.03125" />
+                            <point x="0.5" y="0" />
+                            <point x="0.96875" y="0.03125" />
+                            <point x="1" y="0.5" />
+                            <point x="0.96875" y="0.96875" />
+                            <point x="0.5" y="1" />
+                            <point x="0.03125" y="0.96875" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="block4" sid="259146524814225">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="576911565022628" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tulio Pulgrossi\Desktop\block6.png">
+                        <collision-poly>
+                            <point x="0.03125" y="0.03125" />
+                            <point x="0.5" y="0" />
+                            <point x="0.96875" y="0.03125" />
+                            <point x="1" y="0.5" />
+                            <point x="0.96875" y="0.96875" />
+                            <point x="0.5" y="1" />
+                            <point x="0.03125" y="0.96875" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Start" sid="703833648039701">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="137998615694942" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tulio Pulgrossi\Pictures\Start.png">
+                        <collision-poly>
+                            <point x="0.1" y="0.25" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.884" y="0.29" />
+                            <point x="0.908" y="0.5" />
+                            <point x="0.864" y="0.66" />
+                            <point x="0.5" y="0.77" />
+                            <point x="0.112" y="0.72" />
+                            <point x="0.052" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Button" sid="968272488001627">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="Credits" sid="531057327972084">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="193887982544431" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tulio Pulgrossi\Pictures\Credits.png">
+                        <collision-poly>
+                            <point x="0.1" y="0.25" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.884" y="0.29" />
+                            <point x="0.908" y="0.5" />
+                            <point x="0.864" y="0.66" />
+                            <point x="0.5" y="0.77" />
+                            <point x="0.112" y="0.72" />
+                            <point x="0.052" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Mouse" sid="239778866396290">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="Text" sid="541103638533600">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Panel" sid="163339154840260">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="558219099921486" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tulio Pulgrossi\Downloads\Canvas.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Menu" sid="695343175170449">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="144351103526664" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tulio Pulgrossi\Pictures\Menu.png">
+                        <collision-poly>
+                            <point x="0.1" y="0.25" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.884" y="0.29" />
+                            <point x="0.908" y="0.5" />
+                            <point x="0.864" y="0.66" />
+                            <point x="0.5" y="0.77" />
+                            <point x="0.112" y="0.72" />
+                            <point x="0.052" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Restart" sid="242352686625793">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="668465192862776" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tulio Pulgrossi\Pictures\Restart.png">
+                        <collision-poly>
+                            <point x="0.1" y="0.25" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.884" y="0.29" />
+                            <point x="0.908" y="0.5" />
+                            <point x="0.864" y="0.66" />
+                            <point x="0.5" y="0.77" />
+                            <point x="0.112" y="0.72" />
+                            <point x="0.052" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Menu2" sid="137658027547794">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="339017755487000" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tulio Pulgrossi\Pictures\Menu.png">
+                        <collision-poly>
+                            <point x="0.1" y="0.25" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.884" y="0.29" />
+                            <point x="0.908" y="0.5" />
+                            <point x="0.864" y="0.66" />
+                            <point x="0.5" y="0.77" />
+                            <point x="0.112" y="0.72" />
+                            <point x="0.052" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Resume" sid="673253106742148">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="402822857166222" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tulio Pulgrossi\Pictures\Resume.png">
+                        <collision-poly>
+                            <point x="0.1" y="0.25" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.884" y="0.29" />
+                            <point x="0.908" y="0.5" />
+                            <point x="0.864" y="0.66" />
+                            <point x="0.5" y="0.77" />
+                            <point x="0.112" y="0.72" />
+                            <point x="0.052" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="platform" sid="197256368468836">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="755509564872424" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tulio Pulgrossi\Pictures\platform2.png">
+                        <collision-poly>
+                            <point x="0.468" y="0.468" />
+                            <point x="0.532" y="0.468" />
+                            <point x="0.96" y="0.5" />
+                            <point x="0.532" y="0.532" />
+                            <point x="0.468" y="0.532" />
+                            <point x="0.04" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tulio Pulgrossi\Pictures\platform3.png">
+                        <collision-poly>
+                            <point x="0.464" y="0.464" />
+                            <point x="0.5" y="0.464" />
+                            <point x="0.964" y="0.5" />
+                            <point x="0.536" y="0.536" />
+                            <point x="0.464" y="0.536" />
+                            <point x="0.036" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PressAnyKey" sid="224290200274741">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="542401779760350" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tulio Pulgrossi\Pictures\Press Any Key.png">
+                        <collision-poly>
+                            <point x="0.316667" y="0.431818" />
+                            <point x="0.5" y="0.427273" />
+                            <point x="0.706667" y="0.4" />
+                            <point x="0.913333" y="0.5" />
+                            <point x="0.65" y="0.522727" />
+                            <point x="0.353333" y="0.518182" />
+                            <point x="0.09" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Pause" sid="595796154758689">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="685174357673525" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tulio Pulgrossi\Pictures\Pause.png">
+                        <collision-poly>
+                            <point x="0.243333" y="0.331818" />
+                            <point x="0.756667" y="0.331818" />
+                            <point x="0.93" y="0.5" />
+                            <point x="0.723333" y="0.622727" />
+                            <point x="0.276667" y="0.622727" />
+                            <point x="0.07" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PressAnyKey2" sid="749116532631634">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="364948682565567" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tulio Pulgrossi\Pictures\Press Any Key.png">
+                        <collision-poly>
+                            <point x="0.316667" y="0.431818" />
+                            <point x="0.5" y="0.427273" />
+                            <point x="0.706667" y="0.4" />
+                            <point x="0.913333" y="0.5" />
+                            <point x="0.65" y="0.522727" />
+                            <point x="0.353333" y="0.518182" />
+                            <point x="0.09" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="congratulations" sid="358483422833887">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="430360910537843" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tulio Pulgrossi\Pictures\congratulations.png">
+                        <collision-poly>
+                            <point x="0.33" y="0.45" />
+                            <point x="0.67" y="0.45" />
+                            <point x="0.993333" y="0.5" />
+                            <point x="0.656667" y="0.531818" />
+                            <point x="0.5" y="0.531818" />
+                            <point x="0.316667" y="0.568182" />
+                            <point x="0.0233333" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PressSpace" sid="530572287066341">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="772514803967978" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tulio Pulgrossi\Pictures\Press Space.png">
+                        <collision-poly>
+                            <point x="0.316667" y="0.431818" />
+                            <point x="0.68" y="0.436364" />
+                            <point x="0.856667" y="0.5" />
+                            <point x="0.643333" y="0.513636" />
+                            <point x="0.163333" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TulioPulgrossi" sid="953812356862313">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="586030187078861" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tulio Pulgrossi\Pictures\Tulio Pulgrossi.png">
+                        <collision-poly>
+                            <point x="0.403333" y="0.55" />
+                            <point x="0.5" y="0.495455" />
+                            <point x="0.873333" y="0.5" />
+                            <point x="0.656667" y="0.531818" />
+                            <point x="0.5" y="0.572727" />
+                            <point x="0.316667" y="0.568182" />
+                            <point x="0.1" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="YagoLamana" sid="990136392451592">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="688160098942106" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tulio Pulgrossi\Pictures\Yago Lamana.png">
+                        <collision-poly>
+                            <point x="0.363333" y="0.495455" />
+                            <point x="0.5" y="0.522727" />
+                            <point x="0.643333" y="0.486364" />
+                            <point x="0.853333" y="0.5" />
+                            <point x="0.68" y="0.563636" />
+                            <point x="0.5" y="0.563636" />
+                            <point x="0.3" y="0.590909" />
+                            <point x="0.176667" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="All" sid="804492007099808">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="336813958962093" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tulio Pulgrossi\Pictures\All.png">
+                        <collision-poly>
+                            <point x="0.33" y="0.45" />
+                            <point x="0.5" y="0.459091" />
+                            <point x="0.67" y="0.45" />
+                            <point x="0.886667" y="0.5" />
+                            <point x="0.63" y="0.495455" />
+                            <point x="0.0966667" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="title" sid="701315196383312">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="395101527698662" speed="5">
+                    <frame duration="1" hotspotX="0.500876" hotspotY="0.5" original-source="C:\Users\Tulio Pulgrossi\Pictures\title.png">
+                        <collision-poly>
+                            <point x="0.00175131" y="0.00104167" />
+                            <point x="0.998249" y="0.00104167" />
+                            <point x="0.998249" y="0.998958" />
+                            <point x="0.00175131" y="0.998958" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.500876" hotspotY="0.5" original-source="C:\Users\Tulio Pulgrossi\Pictures\title2.png">
+                        <collision-poly>
+                            <point x="0.00175131" y="0.00104167" />
+                            <point x="0.998249" y="0.00104167" />
+                            <point x="0.998249" y="0.998958" />
+                            <point x="0.00175131" y="0.998958" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.500876" hotspotY="0.5" original-source="C:\Users\Tulio Pulgrossi\Pictures\title3.png">
+                        <collision-poly>
+                            <point x="0.00175131" y="0.00104167" />
+                            <point x="0.998249" y="0.00104167" />
+                            <point x="0.998249" y="0.998958" />
+                            <point x="0.00175131" y="0.998958" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Canvas" sid="813648184039473">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="502273017671782" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tulio Pulgrossi\Pictures\Canvas.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="title2" sid="197160398455665">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="672944399190200" speed="5">
+                    <frame duration="1" hotspotX="0.500876" hotspotY="0.5" original-source="C:\Users\Tulio Pulgrossi\Pictures\title2.png">
+                        <collision-poly>
+                            <point x="0.00175131" y="0.00104167" />
+                            <point x="0.998249" y="0.00104167" />
+                            <point x="0.998249" y="0.998958" />
+                            <point x="0.00175131" y="0.998958" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="GAMEROVERBREAK" sid="139002734519319">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="643816099722505" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tulio Pulgrossi\Downloads\GAMEROVERBREAK.png">
+                        <collision-poly>
+                            <point x="0.000788644" y="0.000469484" />
+                            <point x="0.999211" y="0.000469484" />
+                            <point x="0.999211" y="0.99953" />
+                            <point x="0.000788644" y="0.99953" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Level1.xml</layout>
+        <layout>Menu.xml</layout>
+        <layout>Credits.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Level1.xml</event-sheet>
+        <event-sheet>Menu.xml</event-sheet>
+        <event-sheet>Credits.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Keyboard" uid="36" />
+        <global-instance type="Mouse" uid="40" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

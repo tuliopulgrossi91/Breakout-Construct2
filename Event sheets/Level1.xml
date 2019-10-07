@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Level1</name>
+    <events>
+        <variable constant="0" name="size_Width_Player" sid="231651423544143" static="0" type="number">232</variable>
+        <variable constant="0" name="score" sid="275812895316616" static="0" type="number">0</variable>
+        <event-block sid="726597278116586">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="786411422496356" type="ball">
+                    <param id="0" name="Object">block</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="430380592465101" type="System">
+                    <param id="0" name="Variable">score</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Set text" sid="944171852367853" type="Text">
+                    <param id="0" name="Text">&quot;&quot; &amp; score</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="367478704450680">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="731969679525806" type="block">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="269163231491297" type="System">
+                            <param id="0" name="Seconds">0.3</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="178494116555858" type="block">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="11" name="Set collisions enabled" sid="714089328350112" type="block3">
+                            <param id="0" name="Collisions">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="632096630021369">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="972683146342649" type="block">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="643551689696661" type="System">
+                                    <param id="0" name="Seconds">0.3</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="746347221331113" type="block">
+                                    <param id="0" name="Frame number">2</param>
+                                </action>
+                                <action id="11" name="Set collisions enabled" sid="728199286927229" type="block4">
+                                    <param id="0" name="Collisions">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="120835283286923">
+                                    <conditions>
+                                        <condition id="3" name="Compare frame" sid="992406041135687" type="block">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Number">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="260993540618615" type="System">
+                                            <param id="0" name="Seconds">0.3</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" sid="676879236266209" type="block" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="886889659280811">
+            <conditions>
+                <condition id="2" name="Key is down" sid="510391800408235" type="Keyboard">
+                    <param id="0" name="Key">32 (Space)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="545032556401401" type="ball">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="8Direction" id="8" name="Set enabled" sid="102346664234252" type="block2">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="463384974202987" type="ball">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="458361298531022" type="PressSpace">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="993834997231986" type="block2">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="439147920701914">
+            <conditions>
+                <condition id="-4" name="Is outside layout" sid="729988820003157" type="ball" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="713525879044151" type="System">
+                    <param id="0" name="Variable">score</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="987802559138941" type="System">
+                    <param id="0" name="Variable">size_Width_Player</param>
+                    <param id="1" name="Value">232</param>
+                </action>
+                <action id="-15" name="Set visible" sid="635576963217889" type="Panel">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="516057637925340" type="Restart">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="619061496348357" type="Menu">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="763220833382036" type="System">
+                    <param id="0" name="Time scale">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="522388239681399" type="GAMEROVERBREAK">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="585288192590159">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="345014714638375" type="block2">
+                    <param id="0" name="Object">ball</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="1" name="Set acceleration" sid="860208822204689" type="ball">
+                    <param id="0" name="Acceleration">10</param>
+                </action>
+                <action id="-11" name="Subtract from" sid="941514616302899" type="System">
+                    <param id="0" name="Variable">size_Width_Player</param>
+                    <param id="1" name="Value">10</param>
+                </action>
+                <action id="-5" name="Set width" sid="114682731990235" type="block2">
+                    <param id="0" name="Width">size_Width_Player</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="262868125445052">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="569784618624253" type="System" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="591808544783569" type="Panel">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="640490935227656" type="Resume">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="296951340975625" type="Restart">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="947963510514184" type="Menu">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="126509681326951" type="System">
+                    <param id="0" name="Time scale">1.0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="756534092984630" type="ball">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="998994833528098" type="block2">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="313573145202805">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="339542860411444" type="Keyboard">
+                    <param id="0" name="Key">13 (Return)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set time scale" sid="280458363748041" type="System">
+                    <param id="0" name="Time scale">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="799842634160340" type="Panel">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="607055505570398" type="Resume">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="464840285733731" type="Restart">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="357770898078018" type="Menu">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="895320372521911" type="Pause">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="945238485279918">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="643362438416879" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Resume</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="429286253133368" type="Panel">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="781781937342721" type="System">
+                    <param id="0" name="Time scale">1.0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="588500524363346" type="Resume">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="167388421869872" type="Restart">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="497734564377006" type="Menu">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="965010877008567" type="Pause">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="177485246246390">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="225412623173950" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Restart</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Restart layout" sid="229658206465083" type="System" />
+                <action id="-13" name="Set time scale" sid="235940252062272" type="System">
+                    <param id="0" name="Time scale">1.0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="359924990910716">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="311085455093738" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Menu</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="423188532307537" type="System">
+                    <param id="0" name="Layout">&quot;Menu&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="562455602529486">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="369137033111850" type="System">
+                    <param id="0" name="Variable">score</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">30</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set time scale" sid="312274305194784" type="System">
+                    <param id="0" name="Time scale">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="170502313664204" type="Panel">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="218829051496191" type="Menu">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="400777723235408" type="Credits">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="793065032588712" type="block2">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="283679882823296" type="ball">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="611137156142747" type="congratulations">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

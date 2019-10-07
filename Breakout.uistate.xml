@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout order="0">Level1</layout>
+        <layout order="2">Menu</layout>
+        <layout order="4">Credits</layout>
+        <event-sheet active="1" order="1">Level1</event-sheet>
+        <event-sheet order="3">Menu</event-sheet>
+        <event-sheet order="5">Credits</event-sheet>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="1" name="Project settings" />
+        <property expanded="0" name="Window Size" />
+        <property expanded="1" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="1" />
+    <folders-expanded>
+        <folder expanded="0" path="object-folder/" />
+        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="0" path="event-folder/" />
+        <folder expanded="1" path="file-folder/" />
+        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="1" path="music-folder/" />
+        <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/BG/" />
+        <folder expanded="1" path="animation-folder/block/" />
+        <folder expanded="1" path="animation-folder/block2/" />
+        <folder expanded="1" path="animation-folder/ball/" />
+        <folder expanded="1" path="animation-folder/border/" />
+        <folder expanded="1" path="animation-folder/block3/" />
+        <folder expanded="1" path="animation-folder/block4/" />
+        <folder expanded="1" path="animation-folder/Start/" />
+        <folder expanded="1" path="animation-folder/Credits/" />
+        <folder expanded="1" path="animation-folder/Panel/" />
+        <folder expanded="1" path="animation-folder/Menu/" />
+        <folder expanded="1" path="animation-folder/Restart/" />
+        <folder expanded="1" path="animation-folder/Menu2/" />
+        <folder expanded="1" path="animation-folder/Resume/" />
+        <folder expanded="1" path="animation-folder/platform/" />
+        <folder expanded="1" path="animation-folder/PressAnyKey/" />
+        <folder expanded="1" path="animation-folder/Pause/" />
+        <folder expanded="1" path="animation-folder/PressAnyKey2/" />
+        <folder expanded="1" path="animation-folder/congratulations/" />
+        <folder expanded="1" path="animation-folder/PressSpace/" />
+        <folder expanded="1" path="animation-folder/TulioPulgrossi/" />
+        <folder expanded="1" path="animation-folder/YagoLamana/" />
+        <folder expanded="1" path="animation-folder/All/" />
+        <folder expanded="1" path="animation-folder/title/" />
+        <folder expanded="1" path="animation-folder/Canvas/" />
+        <folder expanded="1" path="animation-folder/title2/" />
+        <folder expanded="1" path="animation-folder/GAMEROVERBREAK/" />
+    </folders-expanded>
+</c2uistate>
